@@ -1,22 +1,14 @@
 @import "tailwindcss";
-@import "tailwindcss/preflight";
 @tailwind utilities;
 
 :root {
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #121212;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.dark {
+  transition: background-color .3s ease-in-out, color .5s ease-in-out
 }
