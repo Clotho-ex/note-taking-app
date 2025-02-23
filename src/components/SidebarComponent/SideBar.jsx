@@ -21,11 +21,11 @@ const SideBar = () => {
   ];
 
   return (
-    <div className="col-span-4">
+    <div>
       {menuItems.map((item, index) => (
         <button
           key={index}
-          className="-ml-2 flex w-[240px] cursor-pointer rounded-lg p-2"
+          className="mt-6 -ml-2 flex w-[240px] cursor-pointer rounded-lg border-1 p-2"
         >
           {item.icon}
           <span className="mr-14 ml-4 text-sm">{item.label}</span>
