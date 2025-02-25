@@ -5,8 +5,8 @@ import React from "react";
 const Logo = () => {
   return (
     <>
-      <div className="mt-4 mr-4 flex justify-between">
-        <div className="ml-4">
+      <div className="flex justify-between">
+        <div className="mt-4 ml-3 w-[240px] lg:border-r border-gray-300">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="95"
@@ -14,12 +14,12 @@ const Logo = () => {
             fill="none"
             viewBox="0 0 95 28"
           >
-            <g clip-path="url(#a)">
+            <g clipPath="url(#a)">
               <g
                 fill="#335CFF"
-                fill-rule="evenodd"
-                clip-path="url(#b)"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipPath="url(#b)"
+                clipRule="evenodd"
               >
                 <path d="M27.4 2.158C26.367.192 22.974.81 20.04 1.595 7.291 6.294 2.781 15.842 1.196 21.53a1.051 1.051 0 0 0-.13.482c-.628 2.413-.713 4.022-.714 4.075a1.048 1.048 0 0 0 1.003 1.09c.016.002.031.002.047.002.558 0 1.023-.441 1.048-1.005.007-.171.072-1.346.468-3.101 3.511-.149 7.046-1.456 10.518-3.898a1.05 1.05 0 0 0 .049-1.681l-1.602-1.269 5.256-.515c.214-.02.416-.106.58-.246a79.991 79.991 0 0 0 5.333-5.056c3.872-4.06 5.211-6.604 4.348-8.25ZM21.178 25.08h-8.974a1.05 1.05 0 0 0 0 2.1h8.974a1.05 1.05 0 0 0 0-2.1Z" />
               </g>
@@ -38,7 +38,7 @@ const Logo = () => {
             </defs>
           </svg>
         </div>
-        <div className="hidden max-w-md items-center gap-6 lg:flex">
+        <div className="mt-4 mr-4 hidden max-w-md items-center gap-6 lg:flex">
           <div className="relative">
             <label className="relative flex items-center">
               <Search className="absolute left-3 text-gray-500" size={20} />

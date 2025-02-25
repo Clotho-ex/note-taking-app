@@ -1,12 +1,8 @@
 import { ChevronRight, House, Import, TagIcon } from "lucide-react";
 import React from "react";
+import useButtonStore from "../../store/ButtonStore";
 
 const SideBar = () => {
-  const menuItems = [
-    { icon: <House color="#335CFF" size={20} />, label: "All Notes" },
-    { icon: <Import color="#335CFF" size={20} />, label: "Archived Notes" },
-  ];
-
   const tags = [
     "Cooking",
     "Dev",
@@ -20,26 +16,37 @@ const SideBar = () => {
     "TypeScript",
   ];
 
-  return (
-    <div>
-      {menuItems.map((item, index) => (
-        <button
-          key={index}
-          className="mt-6 -ml-2 flex w-[240px] cursor-pointer rounded-lg border-1 p-2"
-        >
-          {item.icon}
-          <span className="mr-14 ml-4 text-sm">{item.label}</span>
-          <ChevronRight color="#ffffff" size={20} className="opacity-0" />
-        </button>
-      ))}
+  // Get section states and toggle function from the store
+  const activeSection = useButtonStore((state) => state.activeSection);
+  const setActiveSection = useButtonStore((state) => state.setActiveSection);
 
-      <div className="mt-2 w-[240px] border-b-1"></div>
+  return (
+    <div className="fixed ml-3 hidden h-full w-[240px] flex-col border-r border-gray-300 lg:flex">
+      <button
+        onClick={() => setActiveSection("allNotes")}
+        className="mt-6 flex w-full cursor-pointer items-center gap-4"
+      >
+        <House color="#335cff" />
+        All Notes
+        {activeSection === "allNotes" && <ChevronRight className="ml-[75px]" />}
+      </button>
+      <button
+        onClick={() => setActiveSection("archivedNotes")}
+        className="mt-4 flex w-full cursor-pointer items-center gap-4"
+      >
+        <Import color="#335cff" />
+        Archived Notes
+        {activeSection === "archivedNotes" && (
+          <ChevronRight className="ml-[30px]" />
+        )}
+      </button>
+      <hr className="my-2 border-t border-gray-300" />
       <p className="mt-2">Tags</p>
 
       {tags.map((tag, index) => (
         <div
           key={index}
-          className="-ml-2 flex place-items-center rounded-lg p-2"
+          className="flex place-items-center rounded-lg pt-2 pr-2 pb-2"
         >
           <TagIcon size={18} />
           <span className="ml-3">{tag}</span>
