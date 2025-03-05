@@ -1,12 +1,12 @@
 import Header from "./components/HeaderComponent/Header";
 import Result from "./components/ResultComponent/Result";
-import SideBar from "./Components/SidebarComponent/SideBar";
+import SideBar from "./components/SidebarComponent/SideBar";
 
 function App() {
   return (
     <>
       <div
-        className="relative grid h-screen w-full gap-0"
+        className="relative grid h-screen w-full gap-0 overflow-y-hidden"
         style={{
           gridTemplateAreas: `
                "sidebar result search-settings search-settings search-settings"
@@ -15,21 +15,25 @@ function App() {
                "sidebar result textarea textarea actions"
                "sidebar result textarea textarea actions"
              `,
-          gridTemplateColumns: "240px 240px 1fr 1fr 240px",
+          gridTemplateColumns: "270px 290px 1fr 1fr 260px",
           gridTemplateRows: "auto 1fr 1fr 1fr 1fr",
         }}
       >
         {/* Sidebar */}
         <div
-          className="overflow-y-auto border-r border-gray-300"
+          className="border-r border-gray-300"
           style={{ gridArea: "sidebar" }}
         >
-          <SideBar />
+          <div>
+            <SideBar />
+          </div>
         </div>
 
         {/* Result - without border-r class */}
-        <div className="overflow-y-auto p-4" style={{ gridArea: "result" }}>
-          <Result className="h-full rounded-lg bg-blue-500" />
+        <div style={{ gridArea: "result" }}>
+          <div>
+            <Result />
+          </div>
         </div>
 
         {/* Search and Settings area */}
@@ -37,7 +41,7 @@ function App() {
           className="flex items-center justify-end border-b border-gray-300 p-4"
           style={{ gridArea: "search-settings" }}
         >
-          <Header className="text-gray-500" size={20} />
+          <Header />
         </div>
 
         {/* Text Area */}
@@ -45,24 +49,13 @@ function App() {
           className="overflow-y-auto border-r border-gray-300 p-4"
           style={{ gridArea: "textarea" }}
         >
-          <div className="h-full rounded-lg bg-gray-300 p-4">Text Area</div>
+          <div className="h-full rounded-lg bg-neutral-100 p-4">Text Area</div>
         </div>
 
         {/* Actions */}
         <div className="overflow-y-auto p-4" style={{ gridArea: "actions" }}>
-          <div className="h-full rounded-lg bg-gray-400 p-4">Actions</div>
+          <div className="h-full rounded-lg bg-neutral-100 p-4">Actions</div>
         </div>
-
-        {/* Custom partial border for the Result section */}
-        <div
-          className="absolute bg-gray-300"
-          style={{
-            left: "480px",
-            width: "1px",
-            height: "calc(100% - var(--search-settings-height))",
-            top: "var(--search-settings-height)",
-          }}
-        ></div>
       </div>
       <style jsx>{`
         :root {

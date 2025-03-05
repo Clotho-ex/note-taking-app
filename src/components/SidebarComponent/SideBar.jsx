@@ -22,7 +22,7 @@ const SideBar = ({ className }) => {
 
   return (
     <>
-      <div className="p-4">
+      <div className={`mt-2 hidden h-full p-3 lg:grid ${className}`}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="95"
@@ -53,11 +53,11 @@ const SideBar = ({ className }) => {
             </clipPath>
           </defs>
         </svg>
-      </div>
-      <div className={`ml-3 hidden h-full lg:grid ${className}`}>
         <button
           onClick={() => setActiveSection("allNotes")}
-          className="mt-6 flex cursor-pointer items-center gap-4"
+          className={`mt-6 flex cursor-pointer items-center gap-4 rounded-lg px-2 py-2 ${
+            activeSection === "allNotes" ? "bg-neutral-100" : ""
+          }`}
         >
           <House color="#335cff" />
           All Notes
@@ -67,7 +67,9 @@ const SideBar = ({ className }) => {
         </button>
         <button
           onClick={() => setActiveSection("archivedNotes")}
-          className="mt-4 flex cursor-pointer items-center gap-4"
+          className={`flex cursor-pointer items-center gap-4 rounded-lg px-2 py-2 ${
+            activeSection === "archivedNotes" ? "bg-neutral-100" : ""
+          }`}
         >
           <Import color="#335cff" />
           Archived Notes
@@ -76,16 +78,16 @@ const SideBar = ({ className }) => {
           )}
         </button>
         <hr className="my-1 border-t border-gray-300" />
-        <p className="mt-1">Tags</p>
+        <p className="mt-1 text-neutral-500">Tags</p>
 
         {tags.map((tag, index) => (
-          <div
+          <button
             key={index}
-            className="flex place-items-center rounded-lg pt-2 pr-2 pb-2"
+            className="flex cursor-pointer place-items-center rounded-lg py-3"
           >
             <TagIcon size={18} />
             <span className="ml-3">{tag}</span>
-          </div>
+          </button>
         ))}
       </div>
     </>
