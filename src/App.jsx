@@ -46,7 +46,7 @@ function App() {
           style={{ gridArea: "textarea" }}
         >
           <div className="h-full overflow-hidden rounded-lg bg-neutral-100 p-4">
-            Text Area
+          <textarea autoFocus cols={135} rows={32} />  
           </div>
         </div>
 

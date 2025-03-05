@@ -51,7 +51,7 @@ function Result({ className }) {
           + Create New Note
         </button>
         <p className="mb-4">{description}</p>
-        <div>
+        <div className="overflow-x-hidden">
           {mockNotes.map((note, index) => (
             <div
               key={index}
