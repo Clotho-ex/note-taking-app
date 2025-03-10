@@ -44,8 +44,8 @@ function Result({ className }) {
 
   return (
     <div className={className}>
-      <h1 className="p-4 text-2xl font-bold">{title}</h1>
-      <div className="mt-[10px] border-b border-gray-300"></div>
+      <h1 className="p-4 text-xl font-semibold">{title}</h1>
+      <div className="mt-[14px] border-b border-gray-300"></div>
       <div className="mx-auto grid w-fit place-self-center border-r border-gray-300 p-3">
         <button className="mt-4 mb-4 cursor-pointer rounded-lg bg-blue-500 px-8 py-2 text-white active:bg-blue-400">
           + Create New Note
