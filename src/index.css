@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -7,10 +8,12 @@
   --color-lightGreen: #d1fbe9;
   --color-red: #fb3748;
   --color-lightRed: #ffd5d8;
+  --font-noto: "Noto Sans", sans-serif;
 }
 
 :root {
   font-synthesis: none;
+  font-family: "Noto Sans";
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

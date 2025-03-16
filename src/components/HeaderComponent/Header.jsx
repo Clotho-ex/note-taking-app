@@ -13,7 +13,7 @@ const Logo = ({ className }) => {
               <input
                 type="text"
                 placeholder="Search your notes..."
-                className="rounded-lg border bg-white py-2 pr-4 pl-10 text-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="w-96 rounded-lg border bg-white py-2 pr-4 pl-10 text-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
               />
             </label>
           </div>

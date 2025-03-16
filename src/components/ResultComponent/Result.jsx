@@ -2,12 +2,12 @@ import React, { useState } from "react";
 
 function Result({ className }) {
   const [title, setTitle] = useState("Dynamic Title");
-  const description = "All Notes";
+  const description = "Some descriptive text about whats being shown";
 
   const mockNotes = [
     {
       title: "React Performance Optimization",
-      tags: ["dev", "react"],
+      tags: ["Dev", "React"],
       date: "29 Oct 2024",
     },
     {
@@ -50,7 +50,7 @@ function Result({ className }) {
         <button className="mt-4 mb-4 cursor-pointer rounded-lg bg-blue-500 px-8 py-2 text-white active:bg-blue-400">
           + Create New Note
         </button>
-        <p className="mb-4">{description}</p>
+        <p className="mb-4 text-neutral-500">{description}</p>
         <div className="overflow-x-hidden">
           {mockNotes.map((note, index) => (
             <div
@@ -61,7 +61,7 @@ function Result({ className }) {
               <h2 className="p-2 text-lg font-semibold">{note.title}</h2>
 
               {/* Tags with exactly 12px below title (no extra space) */}
-              <div className="px-3">
+              <div className="px-2">
                 {note.tags.map((tag, tagIndex) => (
                   <span
                     key={tagIndex}
