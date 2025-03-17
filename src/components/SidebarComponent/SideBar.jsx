@@ -1,6 +1,6 @@
 import { ChevronRight, House, Import, TagIcon } from "lucide-react";
 import React from "react";
-import useButtonStore from "../../store/ButtonStore";
+import useButtonStore from "../../store/buttonStore";
 
 const SideBar = () => {
   const tags = [
@@ -55,7 +55,7 @@ const SideBar = () => {
         </svg>
         <button
           onClick={() => setActiveSection("allNotes")}
-          className={`mt-6 flex cursor-pointer items-center gap-4 rounded-lg px-2 py-2 ${
+          className={`mt-6 flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 ${
             activeSection === "allNotes" ? "bg-neutral-100" : ""
           }`}
         >
@@ -67,7 +67,7 @@ const SideBar = () => {
         </button>
         <button
           onClick={() => setActiveSection("archivedNotes")}
-          className={`flex cursor-pointer items-center gap-4 rounded-lg px-2 py-2 ${
+          className={`flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 ${
             activeSection === "archivedNotes" ? "bg-neutral-100" : ""
           }`}
         >

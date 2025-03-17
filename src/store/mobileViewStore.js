@@ -1,4 +1,4 @@
-import create from "zustand";
+import { create } from "zustand";
 
 export const useMobileViewStore = create((set) => ({
   view: "home", // Possible values: "home", "search", "archive", "tags", "settings"
