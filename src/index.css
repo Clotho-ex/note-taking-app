@@ -20,6 +20,33 @@
   box-sizing: border-box;
 }
 
+.desktop-layout {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  gap: 0;
+  overflow: hidden;
+  grid-template-areas:
+    "sidebar result search-settings search-settings search-settings"
+    "sidebar result textarea textarea actions"
+    "sidebar result textarea textarea actions"
+    "sidebar result textarea textarea actions"
+    "sidebar result textarea textarea actions";
+  grid-template-columns: 270px 290px 1fr 1fr 270px;
+  grid-template-rows: auto 1fr 1fr 1fr 1fr;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
 .dark {
   transition:
     background-color 0.3s ease-in-out,

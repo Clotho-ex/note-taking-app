@@ -12,10 +12,10 @@ const Textarea = () => {
       <div className="mb-2 border-b border-gray-300 py-2">
         <textarea
           autoFocus
-          className="w-full overflow-x-scroll lg:h-[430px] 2xl:h-[540px]"
+          className="w-full overflow-x-scroll lg:h-[460px] 2xl:h-[570px]"
         />
       </div>
-      <div className=" flex gap-4 py-2">
+      <div className="flex gap-4 py-1">
         <button className="cursor-pointer rounded-lg bg-blue-500 px-4 py-2 text-white">
           Save Note
         </button>

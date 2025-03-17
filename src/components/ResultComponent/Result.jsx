@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Result({ className }) {
+function Result() {
   const [title, setTitle] = useState("Dynamic Title");
   const description = "Some descriptive text about whats being shown";
 
@@ -43,7 +43,7 @@ function Result({ className }) {
   ];
 
   return (
-    <div className={className}>
+    <div>
       <h1 className="p-4 text-xl font-semibold">{title}</h1>
       <div className="mt-[14px] border-b border-gray-300"></div>
       <div className="mx-auto grid w-fit place-self-center border-r border-gray-300 p-3">

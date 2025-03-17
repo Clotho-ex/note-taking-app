@@ -2,7 +2,7 @@ import { ChevronRight, House, Import, TagIcon } from "lucide-react";
 import React from "react";
 import useButtonStore from "../../store/ButtonStore";
 
-const SideBar = ({ className }) => {
+const SideBar = () => {
   const tags = [
     "Cooking",
     "Dev",
@@ -22,7 +22,7 @@ const SideBar = ({ className }) => {
 
   return (
     <>
-      <div className={`mt-2 hidden h-full p-3 lg:grid ${className}`}>
+      <div className="mt-2 grid h-full p-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="95"
