@@ -99,7 +99,7 @@ function Result() {
       ? "Archived Notes"
       : activeSection === "allNotes"
         ? "All Notes"
-        : "Dynamic Title";
+        : "All Notes";
 
   // Select notes based on the active section
   const notesToDisplay =
@@ -107,7 +107,9 @@ function Result() {
 
   return (
     <div>
-      <h1 className="p-4 text-xl font-semibold">{displayTitle}</h1>
+      <h1 className="p-4 text-center text-2xl font-extrabold">
+        {displayTitle}
+      </h1>
       <div className="mt-[14px] border-b border-gray-300"></div>
       <div className="mx-auto grid w-fit place-self-center border-r border-gray-300 p-3">
         <button className="mt-4 mb-4 cursor-pointer rounded-lg bg-blue-500 px-8 py-2 text-white active:bg-blue-400">

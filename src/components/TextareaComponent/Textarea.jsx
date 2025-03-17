@@ -7,7 +7,7 @@ const Textarea = () => {
   return (
     <>
       <div className="mb-2 border-b border-gray-300 px-4">
-        <h1 className="text-xl font-semibold">
+        <h1 className="text-2xl font-bold">
           {selectedNote ? selectedNote.title : "Title of the Note"}
         </h1>
         <p className="py-2">
